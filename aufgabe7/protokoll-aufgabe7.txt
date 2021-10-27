@@ -1,0 +1,46 @@
+Ersetzen Sie im Fall der Standardeingabe den C-Bibliotheksaufruf fgetc durch den Aufruf der POSIX-Funktion read und bei Dateien die ganze Lese-/Zähl-Schleife durch den Aufruf der POSIX-Funktion stat. Den C-Bibliotheksaufruf fopen brauchen Sie nicht mehr (Warum?). 
+	
+	int stat(const char *pathname, struct stat *statbuf);
+	fopen() wird nicht mehr benötigt da die Funktion stat()
+	(get file Status) die Daten aus dem Pfad(*filename) herbezieht und diese in den 
+	Bereich des *buf-Arguments schreibt . 
+	Das *buf-Argument ist ein Pointer zu einer struct stat (definiert in <sys/stat.h>)
+	Über die struct stat ist es möglich viele nützliche Attribute 
+	des Pfades abzufragen (st_mode, st_size, st_uid, st_atime ...)
+	READ, WRITE oder EXECUTE Berechtigungen werden nicht benötigt
+	
+Kommt für die nicht existierende Datei xxx die gleiche Fehlermeldung?
+In welcher Sprache erscheint die Systemmeldung?
+	in der eingestellten Sprache (LC_MESSAGES) (hier deutsch de_DE=UTF-8)
+
+	ls -l xxx *
+ls: Zugriff auf 'xxx' nicht möglich: Datei oder Verzeichnis nicht gefunden
+
+./filecopy xxx *
+	Aufruf: ./filecopy Quelle Ziel
+
+Ändern Sie mal die Einstellung für die Systemmeldungen wie folgt:
+
+  export LC_MESSAGES=C
+
+In welcher Sprache erscheinen jetzt die Fehlermeldungen von filesize und ls?
+
+	in der default Sprache (englisch)
+	
+Wie verhält sich filecopy,
+wenn die Quelldatei nicht existiert?
+	Quelle srx.txt konnte nicht geöffnet werden, (errno: 2: Datei oder Verzeichnis nicht 	gefunden)
+
+	
+wenn Sie kein Leserecht auf der Quelldatei haben?
+	chmod -r src.txt
+	Quelle src.txt konnte nicht geöffnet werden, (errno: 13: Keine Berechtigung)
+
+wenn die Zieldatei bereits existiert?
+	existiert bereits eine Zieldatei, so wird diese nach den in open gesetzten Flags behandelt.
+	In meinem Fall werden die von open(src) gesetzten Flags beim Befehl creat() übernommen was zur Folge
+	die ZielDatei überschreibt.
+	
+wenn Sie kein Schreibrecht im Zielverzeichnis haben?
+	Ziel konnte nicht geöffnet werden, Aufruf: open(target123.txt) (errno: 13: Keine Berechtigung) 
+
