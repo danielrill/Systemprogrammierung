@@ -1,0 +1,24 @@
+#
+# Makefile
+#
+# Autor: H.Drachenfels
+# Erstellt am: 12.2.2021
+#
+
+CC = gcc -g
+CFLAGS = -Wall -Wextra -Werror -std=$(STD) -pedantic
+CPPCHECK = cppcheck --enable=warning,style --std=$(STD)
+STD = c11
+
+TARGET = stringsort
+
+.PHONY: all clean cppcheck
+
+all: $(TARGET)
+
+clean:
+	$(RM) $(TARGET) $(TARGET).o
+
+cppcheck: $(TARGET).c
+	$(CPPCHECK) $<
+
