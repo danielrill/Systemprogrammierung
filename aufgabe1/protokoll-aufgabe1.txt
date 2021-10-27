@@ -1,0 +1,135 @@
+Ausführung des Programms (inkl sort)
+//*****************************************************************************************************************************
+daniel@Cliffhang3r:~/Schreibtisch/Sysprog/Aufgabe1$ make
+gcc -g -fno-stack-protector -Wall -Wextra -Werror -std=c11 -pedantic   -c -o aufgabe1.o aufgabe1.c
+gcc -g -fno-stack-protector   aufgabe1.o   -o aufgabe1
+daniel@Cliffhang3r:~/Schreibtisch/Sysprog/Aufgabe1$ ./aufgabe1
+Adresse: 0x7ffcd07e7fab		sizeof: 1	Variablentyp: bool			Name: dozer	Wert: 1
+Adresse: 0x7ffcd07e7fa4		sizeof: 4	Variablentyp: int			Name: eger	Wert: 2
+Adresse: 0x7ffcd07e7fa2		sizeof: 2	Variablentyp: short int			Name: si	Wert: 24
+Adresse: 0x7ffcd07e7f98		sizeof: 8	Variablentyp: long int			Name: li	Wert: 1024
+Adresse: 0x7ffcd07e7f90		sizeof: 8	Variablentyp: long long int		Name: lli	Wert: 65536
+Adresse: 0x7ffcd07e7f8c		sizeof: 4	Variablentyp: unsigned int		Name: ui	Wert: 2048
+Adresse: 0x7ffcd07e7f8a		sizeof: 2	Variablentyp: unsigned short int	Name: usi	Wert: 256
+Adresse: 0x7ffcd07e7f80		sizeof: 8	Variablentyp: unsigned long int		Name: uli	Wert: 512
+Adresse: 0x7ffcd07e7f78		sizeof: 8	Variablentyp: unsigned long long int	Name: ulli	Wert: 1024
+Adresse: 0x7ffcd07e7f74		sizeof: 4	Variablentyp: float			Name: ing	Wert: 2.560000
+Adresse: 0x7ffcd07e7f68		sizeof: 8	Variablentyp: double			Name: beef	Wert: 5.120000e+00
+Adresse: 0x7ffcd07e7f50		sizeof: 16	Variablentyp: long double		Name: cheese	Wert: 10.24
+Adresse: 0x7ffcd07e7f4f		sizeof: 1	Variablentyp: char			Name: lotte	Wert: c
+Adresse: 0x7ffcd07e7f4e		sizeof: 1	Variablentyp: signed char		Name: sc	Wert: 64
+Adresse: 0x7ffcd07e7f4d		sizeof: 1	Variablentyp: unsigned char		Name: uc	Wert: 48
+Adresse: 0x7ffcd07e7f40		sizeof: 8	Variablentyp: const char*		Name: s		Wert: Hallo
+LP64-Datenmodell ermittelt...
+GesamtspeicherAuslastung(näherungsweise): 108
+//*****************************************************************************************************************************
+daniel@Cliffhang3r:~/Schreibtisch/Sysprog/Aufgabe1$ ./aufgabe1 | sort
+Adresse: 0x7ffd8f8cd820		sizeof: 8	Variablentyp: const char*		Name: s		Wert: Hallo
+Adresse: 0x7ffd8f8cd82d		sizeof: 1	Variablentyp: unsigned char		Name: uc	Wert: 48
+Adresse: 0x7ffd8f8cd82e		sizeof: 1	Variablentyp: signed char		Name: sc	Wert: 64
+Adresse: 0x7ffd8f8cd82f		sizeof: 1	Variablentyp: char			Name: lotte	Wert: c
+Adresse: 0x7ffd8f8cd830		sizeof: 16	Variablentyp: long double		Name: cheese	Wert: 10.24
+Adresse: 0x7ffd8f8cd848		sizeof: 8	Variablentyp: double			Name: beef	Wert: 5.120000e+00
+Adresse: 0x7ffd8f8cd854		sizeof: 4	Variablentyp: float			Name: ing	Wert: 2.560000
+Adresse: 0x7ffd8f8cd858		sizeof: 8	Variablentyp: unsigned long long int	Name: ulli	Wert: 1024
+Adresse: 0x7ffd8f8cd860		sizeof: 8	Variablentyp: unsigned long int		Name: uli	Wert: 512
+Adresse: 0x7ffd8f8cd86a		sizeof: 2	Variablentyp: unsigned short int	Name: usi	Wert: 256
+Adresse: 0x7ffd8f8cd86c		sizeof: 4	Variablentyp: unsigned int		Name: ui	Wert: 2048
+Adresse: 0x7ffd8f8cd870		sizeof: 8	Variablentyp: long long int		Name: lli	Wert: 65536
+Adresse: 0x7ffd8f8cd878		sizeof: 8	Variablentyp: long int			Name: li	Wert: 1024
+Adresse: 0x7ffd8f8cd882		sizeof: 2	Variablentyp: short int			Name: si	Wert: 24
+Adresse: 0x7ffd8f8cd884		sizeof: 4	Variablentyp: int			Name: eger	Wert: 2
+Adresse: 0x7ffd8f8cd88b		sizeof: 1	Variablentyp: bool			Name: dozer	Wert: 1
+GesamtspeicherAuslastung(näherungsweise): 108
+LP64-Datenmodell ermittelt...
+//*********************************************************************************************************************************
+daniel@Cliffhang3r:~/Schreibtisch/Sysprog/Aufgabe1$ ./aufgabe1 | sort -r
+LP64-Datenmodell ermittelt...
+GesamtspeicherAuslastung(näherungsweise): 108
+Adresse: 0x7fff5c6de69b		sizeof: 1	Variablentyp: bool			Name: dozer	Wert: 1
+Adresse: 0x7fff5c6de694		sizeof: 4	Variablentyp: int			Name: eger	Wert: 2
+Adresse: 0x7fff5c6de692		sizeof: 2	Variablentyp: short int			Name: si	Wert: 24
+Adresse: 0x7fff5c6de688		sizeof: 8	Variablentyp: long int			Name: li	Wert: 1024
+Adresse: 0x7fff5c6de680		sizeof: 8	Variablentyp: long long int		Name: lli	Wert: 65536
+Adresse: 0x7fff5c6de67c		sizeof: 4	Variablentyp: unsigned int		Name: ui	Wert: 2048
+Adresse: 0x7fff5c6de67a		sizeof: 2	Variablentyp: unsigned short int	Name: usi	Wert: 256
+Adresse: 0x7fff5c6de670		sizeof: 8	Variablentyp: unsigned long int		Name: uli	Wert: 512
+Adresse: 0x7fff5c6de668		sizeof: 8	Variablentyp: unsigned long long int	Name: ulli	Wert: 1024
+Adresse: 0x7fff5c6de664		sizeof: 4	Variablentyp: float			Name: ing	Wert: 2.560000
+Adresse: 0x7fff5c6de658		sizeof: 8	Variablentyp: double			Name: beef	Wert: 5.120000e+00
+Adresse: 0x7fff5c6de640		sizeof: 16	Variablentyp: long double		Name: cheese	Wert: 10.24
+Adresse: 0x7fff5c6de63f		sizeof: 1	Variablentyp: char			Name: lotte	Wert: c
+Adresse: 0x7fff5c6de63e		sizeof: 1	Variablentyp: signed char		Name: sc	Wert: 64
+Adresse: 0x7fff5c6de63d		sizeof: 1	Variablentyp: unsigned char		Name: uc	Wert: 48
+Adresse: 0x7fff5c6de630		sizeof: 8	Variablentyp: const char*		Name: s		Wert: Hallo
+/*************************************************************************************************************************************
+daniel@Cliffhang3r:~/Schreibtisch/Sysprog/Aufgabe1$ make CC="g++ -fno-stack-protector" STD=c++11 clean aufgabe1
+rm -f aufgabe1 aufgabe1.o
+g++ -fno-stack-protector -Wall -Wextra -Werror -std=c++11 -pedantic   -c -o aufgabe1.o aufgabe1.c
+g++ -fno-stack-protector   aufgabe1.o   -o aufgabe1
+daniel@Cliffhang3r:~/Schreibtisch/Sysprog/Aufgabe1$ ./aufgabe1
+Adresse: 0x7fff6d2c14db		sizeof: 1	Variablentyp: bool			Name: dozer	Wert: 1
+Adresse: 0x7fff6d2c14d4		sizeof: 4	Variablentyp: int			Name: eger	Wert: 2
+Adresse: 0x7fff6d2c14d2		sizeof: 2	Variablentyp: short int			Name: si	Wert: 24
+Adresse: 0x7fff6d2c14c8		sizeof: 8	Variablentyp: long int			Name: li	Wert: 1024
+Adresse: 0x7fff6d2c14c0		sizeof: 8	Variablentyp: long long int		Name: lli	Wert: 65536
+Adresse: 0x7fff6d2c14bc		sizeof: 4	Variablentyp: unsigned int		Name: ui	Wert: 2048
+Adresse: 0x7fff6d2c14ba		sizeof: 2	Variablentyp: unsigned short int	Name: usi	Wert: 256
+Adresse: 0x7fff6d2c14b0		sizeof: 8	Variablentyp: unsigned long int		Name: uli	Wert: 512
+Adresse: 0x7fff6d2c14a8		sizeof: 8	Variablentyp: unsigned long long int	Name: ulli	Wert: 1024
+Adresse: 0x7fff6d2c14a4		sizeof: 4	Variablentyp: float			Name: ing	Wert: 2.560000
+Adresse: 0x7fff6d2c1498		sizeof: 8	Variablentyp: double			Name: beef	Wert: 5.120000e+00
+Adresse: 0x7fff6d2c1480		sizeof: 16	Variablentyp: long double		Name: cheese	Wert: 10.24
+Adresse: 0x7fff6d2c147f		sizeof: 1	Variablentyp: char			Name: lotte	Wert: c
+Adresse: 0x7fff6d2c147e		sizeof: 1	Variablentyp: signed char		Name: sc	Wert: 64
+Adresse: 0x7fff6d2c147d		sizeof: 1	Variablentyp: unsigned char		Name: uc	Wert: 48
+Adresse: 0x7fff6d2c1470		sizeof: 8	Variablentyp: const char*		Name: s		Wert: Hallo
+LP64-Datenmodell ermittelt...
+GesamtspeicherAuslastung(näherungsweise): 108
+/****************************************************************************************************************************************
+daniel@Cliffhang3r:~/Schreibtisch/Sysprog/Aufgabe1$ cppcheck --enable=warning,style --std=c11 aufgabe1.c
+Checking aufgabe1.c ...
+daniel@Cliffhang3r:~/Schreibtisch/Sysprog/Aufgabe1$ make cppcheck
+cppcheck --enable=warning,style --std=c11 aufgabe1.c
+Checking aufgabe1.c ...
+daniel@Cliffhang3r:~/Schreibtisch/Sysprog/Aufgabe1$ ./aufgabe1
+Adresse: 0x7ffd96ed62ab		sizeof: 1	Variablentyp: bool			Name: dozer	Wert: 1
+Adresse: 0x7ffd96ed62a4		sizeof: 4	Variablentyp: int			Name: eger	Wert: 2
+Adresse: 0x7ffd96ed62a2		sizeof: 2	Variablentyp: short int			Name: si	Wert: 24
+Adresse: 0x7ffd96ed6298		sizeof: 8	Variablentyp: long int			Name: li	Wert: 1024
+Adresse: 0x7ffd96ed6290		sizeof: 8	Variablentyp: long long int		Name: lli	Wert: 65536
+Adresse: 0x7ffd96ed628c		sizeof: 4	Variablentyp: unsigned int		Name: ui	Wert: 2048
+Adresse: 0x7ffd96ed628a		sizeof: 2	Variablentyp: unsigned short int	Name: usi	Wert: 256
+Adresse: 0x7ffd96ed6280		sizeof: 8	Variablentyp: unsigned long int		Name: uli	Wert: 512
+Adresse: 0x7ffd96ed6278		sizeof: 8	Variablentyp: unsigned long long int	Name: ulli	Wert: 1024
+Adresse: 0x7ffd96ed6274		sizeof: 4	Variablentyp: float			Name: ing	Wert: 2.560000
+Adresse: 0x7ffd96ed6268		sizeof: 8	Variablentyp: double			Name: beef	Wert: 5.120000e+00
+Adresse: 0x7ffd96ed6250		sizeof: 16	Variablentyp: long double		Name: cheese	Wert: 10.24
+Adresse: 0x7ffd96ed624f		sizeof: 1	Variablentyp: char			Name: lotte	Wert: c
+Adresse: 0x7ffd96ed624e		sizeof: 1	Variablentyp: signed char		Name: sc	Wert: 64
+Adresse: 0x7ffd96ed624d		sizeof: 1	Variablentyp: unsigned char		Name: uc	Wert: 48
+Adresse: 0x7ffd96ed6240		sizeof: 8	Variablentyp: const char*		Name: s		Wert: Hallo
+LP64-Datenmodell ermittelt...
+GesamtspeicherAuslastung(näherungsweise): 108
+
+--> Keine Fehlermeldungen auch bei strengerem C++-Compiler
+
+- Sind die Variablen in der Reihenfolge ihrer Definition im Hauptspeicher abgelegt ?
+ --> Die Variablen werden tatsächlich in umgekehrter Reihenfolge im Speicher abgelegt.
+ 
+ - Liegen die Variablen direkt hintereinander ? 
+ -->  nicht immer Lücken gibt es zwischen:
+ 	char* und unsigned char 			--> 0x...40 , 0x....4d  (14)	wobei sizeof char* 			= 8
+ 	long double und double  			--> 0x...50 ,  0x...68  (24)     wobei sizeof long double	= 16
+ 	double und float             			--> 0x...68 ,  0x....74  (12)    wobei sizeof double 		= 8
+ 	unsigned long und unsigned short	--> 0x...80 ,  0x....8a  (10)    wobei sizeof unsigned long 	= 8
+ 	long und short 						--> 0x...98  , 0x....a2  (10)    wobei sizeof long 			= 8
+ 	int und bool						--> 0x...a4  , 0x...ab   (8)	wobei sizeof int 			= 4 (LP64)
+ 	
+ - Warum gibt es diese ? 
+ 
+ --> die Adressen werden erweitert um effizienter rechnen zu können.
+ 	Sie werden auf dem Stack so abgelegt, dass diese durch ihre Größe teilbar sind.
+ 	Char kann bspw. in jede Adresse abgelegt werden, da jede Adresse durch den Wert 1 teilbar ist.
+ 	
+
